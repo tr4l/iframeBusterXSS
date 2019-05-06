@@ -45,3 +45,8 @@ check_xss options[:root] + '/unicast/unicastIFD.html', 'creativeby1.unicast.com'
 check_xss options[:root] + '/adrime/adrime_burst.2.0.0.htm' ;
 check_xss options[:root] + '/revjet/revjet_buster.html';
 check_xss options[:root] + '/kpsule/iframebuster.html', 'iframebuster.js';
+check_xss options[:root] + '/smartadserver/iframeout.html', 'iframeout.js';
+check_xss options[:root] + '/saymedia/iframebuster.html', 'iframebuster.js';
+check_xss options[:root] + '/adtech/iframeproxy.html';
+check_xss options[:root] + '/flite/fif.html';
+
