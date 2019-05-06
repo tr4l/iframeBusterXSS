@@ -12,8 +12,14 @@ OptionParser.new do |parser|
   end
 end.parse!
 
+
 def check_xss(url, *content)
-  res = Faraday.get url
+  con = Faraday.new
+  res = con.get do |req|
+    req.url url
+    req.headers['User-Agent'] = 'iframeBusterXSS - https://github.com/tr4l/iframeBusterXSS'
+  end
+
   p "Checking the following url for existence and probable XSS: " + url
   if (res.success?) then
     if content.length == 0 then
