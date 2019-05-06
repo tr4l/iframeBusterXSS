@@ -1,0 +1,3 @@
+/predicta/predicta_bf.html?dm=bgtian.life
+
+The script get the "dm" parameter in the url then load "https://"+dm+"/mrm-ad/commons.js"

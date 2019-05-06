@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--
+  Copyright 2010-2015 AOL Platforms.
+
+  Iframe proxy file to be hosted on publisher servers.
+-->
+<html>
+  <head>
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"","rua.cook":"false","rua.ims":"false"}]);</script>
+<script>!function(){function o(n,i){if(n&&i)for(var r in i)i.hasOwnProperty(r)&&(void 0===n[r]?n[r]=i[r]:n[r].constructor===Object&&i[r].constructor===Object?o(n[r],i[r]):n[r]=i[r])}try{var n=decodeURIComponent("");if(n.length>0&&window.JSON&&"function"==typeof window.JSON.parse){var i=JSON.parse(n);void 0!==window.BOOMR_config?o(window.BOOMR_config,i):window.BOOMR_config=i}}catch(r){window.console&&"function"==typeof window.console.error&&console.error("mPulse: Could not parse configuration",r)}}();</script>
+<script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,o,r,O=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);O.src="javascript:void(0)",O.title="",O.role="presentation",(O.frameElement||O).style.cssText="width:0;height:0;border:0;display:none;",r=document.getElementsByTagName("script")[0],r.parentNode.insertBefore(O,r);try{o=O.contentWindow.document}catch(_){i=document.domain,O.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",o=O.contentWindow.document}o.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"7M5JF-NRG3P-HNUHC-65BD4-6NUYT",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},o.write("<bo"+'dy onload="document._l();">'),o.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e=""=="true"?1:0,t="",n="h2qcbkycckcayxgqehkq-f-3371770ae-clientnsv4-s.akamaihd.net",i={"ak.v":20,"ak.cp":"184776","ak.ai":parseInt("133940",10),"ak.ol":"0","ak.cr":47,"ak.ipv":4,"ak.proto":"","ak.rid":"50b15f17","ak.r":31200,"ak.a2":e,"ak.m":"dscx","ak.n":"essl","ak.bpcip":"62.160.32.0","ak.cport":48048,"ak.gh":"2.23.92.54","ak.quicv":"","ak.tlsv":"tls1.2","ak.0rtt":"","ak.csrc":"-","ak.acc":"reno","ak.t":"1557144021"};if(""!==t)i["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))i["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var a=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.r","ak.acc","ak.t"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+  <body leftmargin="0" topmargin="0">
+    <script>
+      var allowed_domains = ['adserver.adtech.de', 'adserver.adtechus.com',
+                             'aka-cdn.adtech.de', 'aka-cdn-ns.adtech.de', 'aka-cdn-ns.adtechus.com',
+                             'pictela.net', 'ads.pictela.net', 'secure-ads.pictela.net'];
+      try {
+        var adtechIframeHashArray = self.document.location.hash.substring(1).split('|ifv|');
+        var domain = adtechIframeHashArray[0].match(/^https?:\/\/([^:^\/]*)/i)[1];
+        for (var d in allowed_domains) {
+          if (allowed_domains[d] == domain) {
+            document.write('<scr' + 'ipt type="text/javascript" src="' + adtechIframeHashArray[0] + '"></scr' + 'ipt>');
+            break;
+          }
+        }
+      } catch (e) {}
+    </script>
+  </body>
+</html>

