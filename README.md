@@ -20,5 +20,6 @@ Today:
 # Usage
     $ ./check.rb -r http://perdu.com
 
-
+# Pricing
+If you use that succesfully for your pentest work and/or bug bounty with monetary rewards, this is mandatory to pay me a beer at the next event we will be together.
  
