@@ -83,3 +83,16 @@ check_xss options[:root] + '/jpd/jpxdm.html';
 check_xss options[:root] + '/oggifinogi/oggiPlayerLoader.htm';
 check_xss options[:root] + '/rubicon/rp-smartfile.html';
 check_xss options[:root] + '/xaxis/InfinityIframe.html';
+check_xss options[:root] + '/gemius/gfbuster.html';
+
+# Added from https://github.com/Automattic/vip-scanner/blob/master/vip-scanner/checks/AdBustersCheck.php
+check_xss options[:root] + '/adcentric/ifr_b.html';
+check_xss options[:root] + '/adinterax/adx-iframe-v2.html';
+check_xss options[:root] + '/comscore/cs-arIframe.htm';
+check_xss options[:root] + '/interpolls/pub_interpolls.html';
+check_xss options[:root] + '/jpd/jpxdm.html';
+check_xss options[:root] + '/mediamind/MMbuster.html';
+check_xss options[:root] + '/undertone/UT_iframe_buster.html';
+
+# other ?
+check_xss options[:root] + '/ut_iframe_buster-html/', 'ut_ju';

