@@ -10,7 +10,7 @@ A couple of month later:
 - https://blog.detectify.com/2018/10/04/iframe-busters-lead-to-xss/
 Today:
 - Still nothing to detect them ?
-# Instalation
+# Installation
     $ gem install faraday
     $ gem install optparse
     $ git clone https://github.com/tr4l/iframeBusterXSS.git
