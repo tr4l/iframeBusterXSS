@@ -77,7 +77,7 @@ check_xss options[:root] + '/adinterax/adx-iframe-v2.html';
 check_xss options[:root] + '/atlas/atlas_rm.htm';
 check_xss options[:root] + '/blogads/iframebuster-4.html';
 check_xss options[:root] + '/checkm8/CM8IframeBuster.html';
-check_xss options[:root] + '/cs-arIframe.htm';
+check_xss options[:root] + '/comscore/cs-arIframe.htm', '(survey-poll|voicefive)';
 check_xss options[:root] + '/gumgum/iframe_buster.html';
 check_xss options[:root] + '/jpd/jpxdm.html';
 check_xss options[:root] + '/oggifinogi/oggiPlayerLoader.htm';
@@ -88,7 +88,6 @@ check_xss options[:root] + '/gemius/gfbuster.html';
 # Added from https://github.com/Automattic/vip-scanner/blob/master/vip-scanner/checks/AdBustersCheck.php
 check_xss options[:root] + '/adcentric/ifr_b.html';
 check_xss options[:root] + '/adinterax/adx-iframe-v2.html';
-check_xss options[:root] + '/comscore/cs-arIframe.htm';
 check_xss options[:root] + '/interpolls/pub_interpolls.html';
 check_xss options[:root] + '/jpd/jpxdm.html';
 check_xss options[:root] + '/mediamind/MMbuster.html';
