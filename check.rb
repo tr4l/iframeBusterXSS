@@ -51,7 +51,7 @@ check_xss options[:root] + '/liquidus/iframeX.htm', 'Liquidus BannerLink';
 check_xss options[:root] + '/controbox/iframebuster.html'; # Typo ?
 check_xss options[:root] + '/spongecell/spongecell-spongecellbuster.html' ; # Typo ?
 check_xss options[:root] + '/unicast/unicastIFD.html', 'creativeby1.unicast.com';
-check_xss options[:root] + '/adrime/adrime_burst.2.0.0.htm' ;
+check_xss options[:root] + '/adrime/adrime_burst.2.0.0.htm' , 'adrime_burst.js';
 check_xss options[:root] + '/revjet/revjet_buster.html', 'ads.revjet.com';
 check_xss options[:root] + '/kpsule/iframebuster.html', 'iframebuster.js';
 check_xss options[:root] + '/adtech/iframeproxy.html', 'adtechIframeHashArray';
@@ -87,9 +87,9 @@ check_xss options[:root] + '/gemius/gfbuster.html';
 
 # Added from https://github.com/Automattic/vip-scanner/blob/master/vip-scanner/checks/AdBustersCheck.php
 check_xss options[:root] + '/adcentric/ifr_b.html';
-check_xss options[:root] + '/adinterax/adx-iframe-v2.html';
+check_xss options[:root] + '/adinterax/adx-iframe-v2.html', 'escape(p[i])';
 check_xss options[:root] + '/interpolls/pub_interpolls.html';
-check_xss options[:root] + '/jpd/jpxdm.html';
+check_xss options[:root] + '/jpd/jpxdm.html', 'ads.jetpackdigital.com';
 check_xss options[:root] + '/mediamind/MMbuster.html';
 check_xss options[:root] + '/undertone/UT_iframe_buster.html';
 

