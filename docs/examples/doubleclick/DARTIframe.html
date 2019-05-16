@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+ <head></head>
+ <body>
+  <script type="text/javascript">
+   <!--
+     function loadIFrameScript() {
+       try {
+         var globalTemplateVersion = '';
+         var searchString = document.location.search.substr(1);
+         var parameters = searchString.split('&');
+
+         for (var i = 0; i < parameters.length; i++) {
+           var keyValuePair = parameters[i].split('=');
+           var parameterName = keyValuePair[0];
+           var parameterValue = keyValuePair[1];
+
+           if (parameterName == 'gtVersion') {
+             globalTemplateVersion = unescape(parameterValue);
+           }
+         }
+         generateScriptBlock(globalTemplateVersion);
+       }
+       catch(e) {
+       }
+     }
+
+     function generateScriptBlock(gtVersion) {
+       if(!isValid(gtVersion)) {
+         reportError();
+         return;
+       }
+       var url = window.location.protocol +
+         '//s0.2mdn.net/879366/DARTIFrame_' + gtVersion + '.js';
+       document.write('<scr' + 'ipt src="' + url + '"></scr' + 'ipt>');
+     }
+
+     // Validation routine for parameters passed on the URL.
+     // The parameter should contain only letters, numbers, and underscores
+     // and should not exceed 15 characters in length.
+     function isValid(stringValue) {
+       var isValid = false;
+
+       if (stringValue.length <= 15 &&
+           stringValue.search(new RegExp('[^A-Za-z0-9_]')) == -1) {
+         isValid = true;
+       }
+       return isValid;
+     }
+
+     // Report error to the DoubleClick ad server.
+     function reportError() {
+       var publisherProtocol = window.location.protocol + '//';
+       document.write('<img src="' + publisherProtocol +
+           'ad.doubleclick.net/activity;badserve=1" ' +
+           'style="visibility:hidden" width=1 height=1>');
+     }
+
+     loadIFrameScript();
+   -->
+  </script>
+ </body>
+</html>
