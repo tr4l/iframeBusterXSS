@@ -77,30 +77,31 @@ check_xss options[:root], 'sociomatic/iframebuster_Sociomantic.html';
 check_xss options[:root], 'contobox/iframebuster.html', 'getcode.js';
 check_xss options[:root], 'spongecell/spongecell-spongecell_buster.html', 'spongecell_iframebuster.js';
 # Added from https://github.com/Automattic/Adbusters
-check_xss options[:root], '_uac/adpage.html';
-check_xss options[:root], 'adcom/aceFIF.html';
-check_xss options[:root], 'atlas/atlas_rm.htm';
+check_xss options[:root], '_uac/adpage.html', 'Aol Advertisement';
+check_xss options[:root], 'adcom/aceFIF.html', 'aceFIF.js';
+check_xss options[:root], 'atlas/atlas_rm.htm', 'newIframeScript.js';
 check_xss options[:root], 'blogads/iframebuster-4.html';
-check_xss options[:root], 'checkm8/CM8IframeBuster.html';
+check_xss options[:root], 'checkm8/CM8IframeBuster.html', 'cm8adam_iframe_buster_in.js';
 check_xss options[:root], 'comscore/cs-arIframe.htm', '(survey-poll|voicefive)';
 check_xss options[:root], 'gumgum/iframe_buster.html', 'ib.js';
-check_xss options[:root], 'jpd/jpxdm.html';
-check_xss options[:root], 'oggifinogi/oggiPlayerLoader.htm';
+check_xss options[:root], 'jpd/jpxdm.html', 'jpiframe.js';
+check_xss options[:root], 'oggifinogi/oggiPlayerLoader.htm','<title>Frame Booster</title>';
 # Seems safe
 #check_xss options[:root], 'rubicon/rp-smartfile.html';
 check_xss options[:root], 'xaxis/InfinityIframe.html';
 check_xss options[:root], 'gemius/gfbuster.html';
 
 # Added from https://github.com/Automattic/vip-scanner/blob/master/vip-scanner/checks/AdBustersCheck.php
-check_xss options[:root], 'adcentric/ifr_b.html';
+check_xss options[:root], 'adcentric/ifr_b.html','media.adcentriconline.com';
 check_xss options[:root], 'adinterax/adx-iframe-v2.html', 'escape(p[i])';
 check_xss options[:root], 'interpolls/pub_interpolls.html';
 check_xss options[:root], 'jpd/jpxdm.html', 'ads.jetpackdigital.com';
 check_xss options[:root], 'mediamind/MMbuster.html';
-check_xss options[:root], 'undertone/UT_iframe_buster.html';
+check_xss options[:root], 'undertone/UT_iframe_buster.html', 'undertone.com';
 
 # other ?
 check_xss options[:root], 'ut_iframe_buster-html/', 'ut_ju';
 check_xss options[:root], 'doubleclick/DARTIframe.html', 'gtVersion';
 check_xss options[:root], 'doubleclick/fif.html';
+check_xss options[:root], 'doubleclick/adx_iframe.html', 'adx_iframe.js';
 check_xss options[:root], 'pictela/Pictela_iframeproxy.html';
