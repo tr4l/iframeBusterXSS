@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+<title>Aol Advertisement</title>
+<script type='text/javascript'>
+function adsPageOnL(){
+  var adFr=window.frameElement
+  adsLoaded=1;
+  if (adFr){
+      if (adFr.textAd!=1){
+        var collapse=parent.adsCkCol(adFr,document)
+        if (!collapse&&adFr.divName){
+          var parDiv=parent.document.getElementById(adFr.divName)
+          if (parDiv&&(parDiv.dynSz==1)&&parent.adsRMIFOnL){
+          parent.adsRMIFOnL(window,document)
+          }
+        }
+      }
+      else
+        parent.adsDoOnL(adFr,document)
+  }
+}
+function adsPageTimeout(){
+	var adFr=window.frameElement;
+	if (!adsLoaded&&adFr&&adFr.comment!=1&&adFr.textAd!=1&&adFr.divName){
+		var parDiv=parent.document.getElementById(adFr.divName)
+		if (parDiv&&(parDiv.dynSz==1)&&parent.adsRMIFOnL){
+			parent.adsRMIFOnL(window,document,"timeout");
+			var z=setTimeout(function(){adsPageTimeout()},500);
+		}
+	}
+}
+</script>
+</head>
+<body onload='setTimeout("adsPageOnL()",10)' style="overflow: visible; border:0; background-color: transparent;">
+<div id="adDiv" style="overflow: visible; border:0;">
+<span id="adSpan" style="overflow: visible; border:0;">
+<table id="adTable" style="display:inline; border-collapse:collapse;">
+<tr><td style="padding:0px">
+<script type='text/javascript'>
+inDapIF=true;
+inFIF=true;
+var adsLoaded=0;
+var zz=setTimeout(function(){adsPageTimeout()},2000);
+if (parent.adsGetAdURL)
+    document.write("<scr"+"ipt type='text/javascript' src='"+parent.adsGetAdURL(window)+"'></scr"+"ipt>")
+</script>
+</td></tr></table>
+</span></div>
+</body></html>

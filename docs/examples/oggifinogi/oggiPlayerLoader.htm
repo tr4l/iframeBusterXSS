@@ -1,0 +1,92 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Frame Booster</title>
+    <script type="text/javascript" src="http://oggi_static.s3.amazonaws.com/ScriptLoader.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+    if (window.parent != top){
+        var ref = window.parent.document.referrer;
+
+        if (ref != null && ref != ""){
+            var prefix;
+
+            if (ref.indexOf("http://") == 0){
+	            prefix = "http://";
+            }
+            else{
+	            prefix = "https://";
+            }
+        		
+            var slashPos = ref.indexOf("/",prefix.length);
+
+            if (slashPos > 0){
+	            ref = ref.substring(prefix.length, slashPos); 
+            }
+            else {
+	            ref = ref.substr(prefix.length);
+            }
+
+            window.parent.location = prefix + ref + "/oggiPlayerLoader.htm" + location.search;
+        }
+    }
+    else{
+        var frame = window.frameElement;
+        frame.style.display = "none";
+        
+        var queryString = new Oggifinogi.UriQuery(location);
+        var contextId = queryString.GetParameter("contextId");
+        var width = queryString.GetParameter("width");
+        var height = queryString.GetParameter("height");
+        var gExternal = decodeURIComponent(queryString.GetParameter("gExternal"));
+    
+        var placeHolder = top.document.createElement("div");
+        frame.parentNode.insertBefore(placeHolder, frame);
+        
+        placeHolder.id = "oggiPlaceholder" + contextId;
+        placeHolder.style.width = width;
+        placeHolder.style.height = height;
+                
+        var playerDiv = top.document.createElement("div");
+        top.document.body.insertBefore(playerDiv, top.document.body.childNodes[0]);
+        
+        var url = unescape(queryString.GetParameter("url"));
+        var vary = queryString.GetParameter("vary");
+        if (vary == null){
+            vary = "_AD";
+        }
+        var version = queryString.GetParameter("version");
+        
+        var impolite = queryString.GetParameter("oggiImpolite");
+        if (impolite == null){
+            impolite = "true";
+        }
+        
+        playerDiv.id = "oggiPlayerDiv" + contextId;
+        playerDiv.style.width = width;
+        playerDiv.style.height = height;
+        playerDiv.style.position = "absolute";
+        playerDiv.style.zIndex = 2000;
+        
+        playerDiv.setAttribute("playerUrl", url);
+        playerDiv.setAttribute("vary", vary);
+        playerDiv.setAttribute("gExternal", gExternal);
+        playerDiv.setAttribute("impolite", impolite);
+
+        var scriptLoader = new Oggifinogi.ScriptLoader("oggiPlayerLoaderScript", 'http://oggi_static.s3.amazonaws.com/PlayerLoader' + vary + version + ".js",["PlayerLoader"]);
+        scriptLoader.Load();
+        
+        var trackingHtml = decodeURIComponent(queryString.GetParameter("tHtml"));
+        
+        if (trackingHtml != null && trackingHtml != "" && trackingHtml != "undefined"){
+            try {
+                trackingHtml = decodeURIComponent(trackingHtml).replace(/\\1/g, "\r\n");
+                document.write(trackingHtml);
+            }
+            catch(e){}
+            }
+        }
+    </script>
+</body>
+</html>
