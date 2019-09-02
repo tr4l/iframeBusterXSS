@@ -21,6 +21,7 @@ def check_xss(root , path, *content)
   res = con.get do |req|
     req.url root + path
     req.headers['User-Agent'] = 'iframeBusterXSS - https://github.com/tr4l/iframeBusterXSS'
+    #req.headers['User-Agent'] = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36'
   end
 
   $logger.info("Checking the following file: " + path)
@@ -42,7 +43,7 @@ check_xss options[:root], 'predicta/predicta_bf.html', 'function getParam';
 check_xss options[:root], 'admotion/afa-iframe.htm', 'args.iq';
 check_xss options[:root], 'ipinyou/py_buster.html', 'bustJS';
 check_xss options[:root], 'rockabox/rockabox_buster.html', 'function getParameterByName';
-check_xss options[:root], 'undertone/iframe-buster.html';
+check_xss options[:root], 'undertone/iframe-buster.html' 'undertone.com';
 
 # Added by google after original discovery
 check_xss options[:root], 'adform/IFrameManager.html', 'setIntervalXSS';
@@ -88,8 +89,8 @@ check_xss options[:root], 'jpd/jpxdm.html', 'jpiframe.js';
 check_xss options[:root], 'oggifinogi/oggiPlayerLoader.htm','<title>Frame Booster</title>';
 # Seems safe
 #check_xss options[:root], 'rubicon/rp-smartfile.html';
-check_xss options[:root], 'xaxis/InfinityIframe.html';
-check_xss options[:root], 'gemius/gfbuster.html';
+check_xss options[:root], 'xaxis/InfinityIframe.html','<title>Xaxis</title>';
+check_xss options[:root], 'gemius/gfbuster.html', 'gfbuster.js';
 
 # Added from https://github.com/Automattic/vip-scanner/blob/master/vip-scanner/checks/AdBustersCheck.php
 check_xss options[:root], 'adcentric/ifr_b.html','media.adcentriconline.com';
@@ -99,9 +100,25 @@ check_xss options[:root], 'jpd/jpxdm.html', 'ads.jetpackdigital.com';
 check_xss options[:root], 'mediamind/MMbuster.html';
 check_xss options[:root], 'undertone/UT_iframe_buster.html', 'undertone.com';
 
+# Added from https://gist.github.com/pricejn2/9788264
+check_xss options[:root], 'eyereturn/eyereturn.html', 'voken.eyereturn.com';
+check_xss options[:root], 'unicast/UnicastIframe.html';
+check_xss options[:root], 'viewpoint/vwpt.html', 'viewpoint.com';
+
 # other ?
+check_xss options[:root], 'videoegg/vedoc.html', 'Missing tagid and tagurl';
+check_xss options[:root], 'ifrm/cwfl.htm', 'tag.contextweb.com/TagPublish/GetAd.js';
+check_xss options[:root], 'tribalfusion/tfBuster_telegraph.html', 'tribalfusion.com';
+check_xss options[:root], 'safecount/GateFile.html', 'dynamiclink.js.php';
+check_xss options[:root], 'klipmart/km_ss.html', 'http://gfx.dvlabs.com/';
+check_xss options[:root], 'appnexus/aniframe.html', 'adnxsCdnUrl';
 check_xss options[:root], 'ut_iframe_buster-html/', 'ut_ju';
 check_xss options[:root], 'doubleclick/DARTIframe.html', 'gtVersion';
 check_xss options[:root], 'doubleclick/fif.html';
 check_xss options[:root], 'doubleclick/adx_iframe.html', 'adx_iframe.js';
 check_xss options[:root], 'pictela/Pictela_iframeproxy.html';
+check_xss options[:root], '3lift.html'; # Should probably not be in root, link to ib.3lift.com
+check_xss options[:root], 'isocket.html'; # Same, link to d.adsbyisocket.com
+# check_xss options[:root], 'maxtest.html'; # 
+
+# http://rt.liftdna.com/liftrtb_4.js
