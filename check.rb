@@ -102,7 +102,7 @@ check_xss options[:root], 'undertone/UT_iframe_buster.html', 'undertone.com';
 
 # Added from https://gist.github.com/pricejn2/9788264
 check_xss options[:root], 'eyereturn/eyereturn.html', 'voken.eyereturn.com';
-check_xss options[:root], 'unicast/UnicastIframe.html';
+check_xss options[:root], 'unicast/UnicastIframe.html', 'cache.unicast.com';
 check_xss options[:root], 'viewpoint/vwpt.html', 'viewpoint.com';
 
 # other ?
