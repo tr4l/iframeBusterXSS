@@ -1,0 +1,3 @@
+?xxx="%27></script><script>alert(%27%27);</script>
+
+The iframe script hardcode the call to the js, but simply document.write all the param after the url.
