@@ -110,6 +110,7 @@ check_xss options[:root], 'videoegg/vedoc.html', 'Missing tagid and tagurl';
 check_xss options[:root], 'ifrm/cwfl.htm', 'tag.contextweb.com/TagPublish/GetAd.js';
 check_xss options[:root], 'tribalfusion/tfBuster_telegraph.html', 'tribalfusion.com';
 check_xss options[:root], 'safecount/GateFile.html', 'dynamiclink.js.php';
+check_xss options[:root], 'dynamiclogic/GateFile.html', 'dynamiclink.js.php';
 check_xss options[:root], 'klipmart/km_ss.html', 'http://gfx.dvlabs.com/';
 check_xss options[:root], 'appnexus/aniframe.html', 'adnxsCdnUrl';
 check_xss options[:root], 'ut_iframe_buster-html/', 'ut_ju';
