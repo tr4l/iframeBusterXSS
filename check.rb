@@ -122,3 +122,5 @@ check_xss options[:root], 'isocket.html'; # Same, link to d.adsbyisocket.com
 # check_xss options[:root], 'maxtest.html'; # 
 
 # http://rt.liftdna.com/liftrtb_4.js
+# 2024 ...
+check_xss options[:root], 'ftlocal/IFrameBuster.html', 'adsParams';
