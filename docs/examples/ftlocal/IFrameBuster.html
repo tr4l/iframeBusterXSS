@@ -1,0 +1,91 @@
+
+
+<html>
+<head>
+<script>
+var adsParams=JSON.parse(window.name);	
+top.document.body.className+=" smartclip_"+adsParams.serviceType;
+function getXMLHttpRequest() 
+{
+    if (window.XMLHttpRequest) {
+        return new window.XMLHttpRequest;
+    }
+    else {
+        try {
+            return new ActiveXObject("MSXML2.XMLHTTP.3.0");
+        }
+        catch(ex) {
+            return null;
+        }
+    }
+}
+
+
+</script>
+
+</head>
+<body>
+
+<script>
+
+var scUrl=null;
+var htUrl=null;
+var rootSrc="https://s3.eu-central-1.amazonaws.com/sc-devel/";
+function parseQuery(qstr) {
+        var query = {};
+        var a = (qstr[0] === '?' ? qstr.substr(1) : qstr).split('&');
+        for (var i = 0; i < a.length; i++) {
+            var b = a[i].split('=');
+            query[decodeURIComponent(b[0])] = decodeURIComponent(b[1] || '');
+        }
+        return query;
+    }
+	
+var gP=parseQuery(top.document.location.search);
+if(typeof gP.__sm_debug!="undefined")
+	scUrl=rootSrc+gP.__sm_debug;
+else
+{	
+		if(typeof adsParams["src"]!="undefined")
+			scUrl=adsParams["src"];			
+}
+
+if(scUrl!=null)
+{	
+	var snode=document.createElement("script");	
+	snode.src=scUrl;
+	document.body.appendChild(snode);	
+}
+else
+{
+	if(typeof adsParams["html"]!="undefined")
+	{
+		htUrl=adsParams["html"];
+	}	
+	if(htUrl!=null)
+	{
+		// Esto es muy simple...
+		var oReq = getXMLHttpRequest();
+		if (oReq != null) {
+			oReq.open("GET", htUrl, true);
+			oReq.onreadystatechange = function handler()
+			{
+				if (oReq.readyState == 4 /* complete */) {
+					if (oReq.status == 200) {
+						var vdiv=document.createElement("iframe");
+						vdiv.style.borderWidth='0px';
+						vdiv.frameBorder=0;
+						document.body.appendChild(vdiv);
+						vdiv.contentWindow.document.write(oReq.responseText);						
+					}
+				}
+			}
+			oReq.send();
+		}		
+
+	}
+}
+</script>
+</body>
+
+</html>
