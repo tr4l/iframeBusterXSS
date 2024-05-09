@@ -1,0 +1,12 @@
+
+<html>
+<head></head>
+<body style=margin:0;padding:0>
+<script>
+var strSearch = document.location.search;
+var subPos = strSearch.indexOf("sub");
+var strHTML = unescape(strSearch.substr(subPos+4, strSearch.indexOf("&")-subPos-4));
+self.document.write('<scr'+'ipt language="javascript" src="//'+strHTML+'.questionmarket.com/adscgen/dynamiclink.js.php'+strSearch+'"></scr'+'ipt>');
+</script>
+</body>
+</html>
